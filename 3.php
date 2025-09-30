@@ -1,5 +1,11 @@
 <?php
-function mostRecent($text) {  
+/**
+ * Undocumented function
+ *
+ * @param string $text
+ * @return string|int|null
+ */
+function mostRecent(string $text) {
     if (strlen($text) > 1000) {  
         return "Текст превышает допустимую длину (1000 символов)";  
     }   

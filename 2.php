@@ -1,5 +1,10 @@
-<?php 
-function isPerfectNumber($number) {   
+<?php
+/**
+ *
+ * @param int $number
+ * @return bool
+ */
+function isPerfectNumber(int $number) {   
     if ($number <= 0) {  
         return false;  
     } 
@@ -10,15 +15,22 @@ function isPerfectNumber($number) {
         }  
     }  
     return $sum == $number;  
-}  
+}
+
+/**
+ * Undocumented function
+ *
+ * @param int[] $numbers
+ * @return int[]
+ */
 function findPerfectNumbers(array $numbers) {  
-    $perfectNumbers = [];  
+    $perfectNumbers = [];
     foreach ($numbers as $number) {  
         if (isPerfectNumber($number)) {  
             $perfectNumbers[] = $number;  
         }  
     }  
-    return $perfectNumbers;  
+    return $perfectNumbers;
 }   
 $numbers = [6, 28, 496, 12, 20, 8128];  
 $perfects = findPerfectNumbers($numbers);  
